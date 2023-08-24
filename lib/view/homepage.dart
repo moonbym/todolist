@@ -4,8 +4,16 @@ import 'package:newtodolist/model/dto/datatransfereobject.dart';
 
 import 'package:provider/provider.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late TextEditingController titlecontroller =
+      TextEditingController(text: null);
 
   @override
   Widget build(BuildContext context) {
